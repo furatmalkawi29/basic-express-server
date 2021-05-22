@@ -17,9 +17,12 @@ Furat Malkawi
 
 * [Submission Pull Request]()
 
-* [Deployed App]()
+* [Deployed App /main](https://furat-server-deploy-prod.herokuapp.com)
 
-* [Error Report]()
+* [Deployed App /dev](https://furat-server-deploy-dev.herokuapp.com)
+
+
+* [Error Report](https://github.com/furatmalkawi29/basic-express-server/actions/runs/867278662/workflow)
 
 <hr>
 
