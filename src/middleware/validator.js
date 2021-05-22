@@ -1,6 +1,9 @@
 'use strict';
 
-module.exports= (req,res,next) =>{
+module.exports = (req,res,next) =>{
   if( req.query.name ) { next(); } // Run the next middleware
-  else { next('invalid name!'); } // Run the error handler, skipping all other middleware
+  else { throw new Error('No name was specified');}
+
+  /* next('No names found!'); } /* Run the error handler, skipping all 
+  other middlewares*/
 };
