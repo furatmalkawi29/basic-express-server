@@ -35,7 +35,7 @@ describe('server', () => {
   it('should get 500 status error if no name in the query string', async () => {
     const errorResponse = {
       status: 500,
-      message: 'No name was specified',
+      message: 'No name found',
     };
 
     const response = await request.get('/person');

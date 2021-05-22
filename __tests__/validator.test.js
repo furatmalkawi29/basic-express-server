@@ -20,23 +20,10 @@ describe('middleware that checks query string, looking for name property',()=>{
     expect(next).toHaveBeenCalledWith();
   });
 
-  it ('should thow error when request has the name property without a value', ()=> {
-    
-    request.query.name = null;
-    
-    validator(request,response,next);
-
-    expect(next).toHaveBeenCalledWith('No names found!');
-  });
-
 
   it ('should thow error when request query doesnt have name property', ()=> {
     request.query={};
-    
-    validator(request,response,next);
-
-    expect(next).toHaveBeenCalledWith('No names found!');
+    expect(() => validator(request, response, next)).toThrow('No name found');
   });
-
 
 });
