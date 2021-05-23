@@ -14,6 +14,8 @@ const errorHanlder = require('./error-handlers/500.js');
 
 //body parsing middleware
 
+//use 
+app.use(logger);
 
 //routs
 app.get('/person', validator, personHandler);
@@ -47,16 +49,15 @@ function personHandler (req,res){
  * @param {object} res HTTP response object
  */
 function homeHandler (req,res){
-  console.log('hello user');
+  res.send('hello user');
 }
 
 
 
 //use 
-app.use('*', pageNotFoundHandler);
-app.use(logger);
-app.use(validator);
 app.use(errorHanlder);
+app.use('*', pageNotFoundHandler);
+
 
 
 
